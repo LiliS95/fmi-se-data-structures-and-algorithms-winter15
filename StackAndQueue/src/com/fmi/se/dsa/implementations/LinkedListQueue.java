@@ -29,7 +29,11 @@ public class LinkedListQueue<T> implements Queue<T> {
     public T pop() {
         if (this.head != null) {
             Node<T> popped = this.head;
-            this.head = this.head.getNext();
+            if (this.head == this.tail) {
+                this.tail = this.head = null;
+            } else {
+                this.head = this.head.getNext();
+            }
             return popped.getData();
         }
         return null;

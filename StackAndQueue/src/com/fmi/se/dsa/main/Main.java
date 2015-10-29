@@ -30,19 +30,21 @@ public class Main {
         while (!intStack.isEmpty()) {
             System.out.println(intStack.pop());
         }
-        
+
         System.out.println("------------");
-        
+
         Queue<Integer> intQueue = new LinkedListQueue<>();
         intQueue.push(1);
+        System.out.println(intQueue.pop());
         intQueue.push(2);
         intQueue.push(3);
         System.out.println(intQueue.pop());
         intQueue.push(4);
-        
-        while(!intQueue.isEmpty()){
+
+        while (!intQueue.isEmpty()) {
             System.out.println(intQueue.pop());
         }
         System.out.println(intQueue.pop());
+        System.out.println(intQueue.isEmpty());
     }
 }
