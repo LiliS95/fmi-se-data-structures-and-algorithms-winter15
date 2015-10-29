@@ -1,13 +1,7 @@
-package com.fmi.si.sda.containers;
+package com.fmi.se.dsa.implementations;
 
-import com.fmi.si.sda.interfaces.Stack;
-import com.fmi.sda.node.Node;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import com.fmi.se.dsa.Node;
+import com.fmi.se.dsa.interfaces.Stack;
 
 /**
  *

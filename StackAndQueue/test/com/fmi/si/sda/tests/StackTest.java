@@ -1,7 +1,7 @@
 package com.fmi.si.sda.tests;
 
-import com.fmi.si.sda.containers.LinkedListStack;
-import com.fmi.si.sda.interfaces.Stack;
+import com.fmi.se.dsa.implementations.LinkedListStack;
+import com.fmi.se.dsa.interfaces.Stack;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -17,9 +17,6 @@ public class StackTest {
     private static final Integer TWO = 2;
     private static final Integer THREE = 3;
 
-    public StackTest() {
-    }
-
     @Before
     public void initTest() {
         stack = new LinkedListStack<>();
@@ -33,7 +30,7 @@ public class StackTest {
         stack.push(TWO);
         stack.push(THREE);
         assertEquals(stack.pop(), THREE);
-        
+
         stack.pop();
         assertNull(stack.pop());
     }

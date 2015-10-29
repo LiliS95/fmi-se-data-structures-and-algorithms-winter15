@@ -1,9 +1,9 @@
-package com.fmi.si.sda;
+package com.fmi.se.dsa.main;
 
-import com.fmi.si.sda.containers.LinkedListQueue;
-import com.fmi.si.sda.containers.LinkedListStack;
-import com.fmi.si.sda.interfaces.Queue;
-import com.fmi.si.sda.interfaces.Stack;
+import com.fmi.se.dsa.implementations.LinkedListQueue;
+import com.fmi.se.dsa.implementations.LinkedListStack;
+import com.fmi.se.dsa.interfaces.Queue;
+import com.fmi.se.dsa.interfaces.Stack;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

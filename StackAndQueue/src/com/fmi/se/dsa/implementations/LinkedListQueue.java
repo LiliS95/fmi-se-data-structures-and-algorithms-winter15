@@ -1,7 +1,7 @@
-package com.fmi.si.sda.containers;
+package com.fmi.se.dsa.implementations;
 
-import com.fmi.sda.node.Node;
-import com.fmi.si.sda.interfaces.Queue;
+import com.fmi.se.dsa.Node;
+import com.fmi.se.dsa.interfaces.Queue;
 
 /**
  *
@@ -28,9 +28,9 @@ public class LinkedListQueue<T> implements Queue<T> {
     @Override
     public T pop() {
         if (this.head != null) {
-            T popped = this.head.getData();
+            Node<T> popped = this.head;
             this.head = this.head.getNext();
-            return popped;
+            return popped.getData();
         }
         return null;
     }

@@ -1,9 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.fmi.sda.node;
+package com.fmi.se.dsa;
 
 /**
  *
@@ -12,11 +7,20 @@ package com.fmi.sda.node;
  */
 public class Node<T> {
 
-    private final T data;
+    private T data;
     private Node<T> next;
+
+    public Node() {
+        this.data = null;
+    }
 
     public Node(T data) {
         this.data = data;
+    }
+
+    public Node(Node other) {
+        this.data = (T) other.data;
+        this.next = other.next;
     }
 
     public Node<T> getNext() {
@@ -30,4 +34,9 @@ public class Node<T> {
     public T getData() {
         return data;
     }
+
+    public void setData(T data) {
+        this.data = data;
+    }
+
 }
