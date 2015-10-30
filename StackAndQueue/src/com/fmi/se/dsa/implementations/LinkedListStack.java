@@ -14,13 +14,8 @@ public class LinkedListStack<T> implements Stack<T> {
 
     @Override
     public void push(T data) {
-        Node<T> newNode = new Node<>(data);
-        if (this.top == null) {
-            this.top = newNode;
-        } else {
-            newNode.setNext(this.top);
-            this.top = newNode;
-        }
+        Node<T> newNode = new Node<>(data, top);
+        this.top = newNode;
     }
 
     @Override

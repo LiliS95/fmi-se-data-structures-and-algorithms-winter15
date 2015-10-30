@@ -18,6 +18,11 @@ public class Node<T> {
         this.data = data;
     }
 
+    public Node(T data, Node<T> next) {
+        this.data = data;
+        this.next = next;
+    }
+
     public Node(Node other) {
         this.data = (T) other.data;
         this.next = other.next;

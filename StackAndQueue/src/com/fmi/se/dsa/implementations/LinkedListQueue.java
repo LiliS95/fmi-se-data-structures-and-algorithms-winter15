@@ -17,7 +17,7 @@ public class LinkedListQueue<T> implements Queue<T> {
     public void push(T data) {
         Node<T> newNode = new Node<>(data);
 
-        if (this.tail != null) {
+        if (!isEmpty()) {
             this.tail.setNext(newNode);
             this.tail = newNode;
         } else {
