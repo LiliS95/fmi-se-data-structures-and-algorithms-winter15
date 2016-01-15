@@ -15,7 +15,7 @@ public class StringHashMap<V> implements MyMap<V> {
     private final double LOAD_FACTOR = 0.75;
     private final int DEFAULT_BINARY_POWER = 2;
 
-    private int size = 0;
+    private int size;
     private int capacity;
     private List<MapEntry> table;
 
@@ -28,6 +28,7 @@ public class StringHashMap<V> implements MyMap<V> {
     private void init(int power) {
         this.capacity = power;
         this.table = new ArrayList<>(Collections.nCopies(capacity, null));
+        this.size = 0;
     }
 
     @Override
