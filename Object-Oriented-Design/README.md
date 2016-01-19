@@ -127,3 +127,143 @@ class Triangle implements Shape {
     }
 }
 ```
+
+##### - L ( Liskov substitution principle )
+Likov's Substitution Principle states that if a program module is using a Base class, then the reference to the Base class can be replaced with a Derived class without affecting the functionality of the program module.
+
+```{java}
+// Good example:
+class Vehicle {
+    void startEngine() {
+        // Default engine start functionality
+    }
+ 
+    void accelerate() {
+        // Default acceleration functionality
+    }
+}
+
+class Car extends Vehicle {
+    void startEngine() {
+        this.engageIgnition();
+        super.startEngine();
+    }
+ 
+    private void engageIgnition() {
+        // Ignition procedure
+    }
+}
+```
+##### - I ( The Interface Segregation Principle )
+States that no client should be forced to depend on methods it does not use. ISP splits interfaces which are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. 
+
+**Example 1**
+```{java}
+// Bad 
+interface Vehicle {
+    void startEngine();
+    void accelerate();
+    void brake();
+    void lightsOn();
+    void lightsOff();
+    void signalLeft();
+    void signalRight();
+    void changeGear();
+    void startRadio();
+    void stopRadio();
+    void nextRadioStation();
+}
+```
+
+```{java}
+// Good 
+interface ControllableEngine {
+    void startEngine();
+    void accelerate();
+    void brake();
+}
+
+interface ControllableLights {
+    void lightsOn();
+    void lightsOff();
+    void signalLeft();
+    void signalRight();
+}
+
+interface ControllableAudio {
+    void startRadio();
+    void stopRadio();
+    void nextRadioStation();
+}
+```
+
+**Example 2**
+```{java}
+// meeeh
+interface IWorker {
+    public void work();
+    public void eat();
+}
+
+class Worker implements IWorker{
+    public void work() {
+		      //.... working much more
+    }
+
+    public void eat() {
+        //.... eating in launch break
+    }
+}
+
+class Manager {
+    IWorker worker;
+
+    public void manage() {
+        // doesn't care if you can eat
+        worker.work();
+    }
+}
+```
+
+
+```{java}
+// better
+interface Workable {
+    public void work();
+}
+
+interface Feedable{
+    public void eat();
+}
+
+class Manager {
+    Workable worker;
+
+    public void manage() {
+        worker.work();
+    }
+}
+```
+
+##### - D ( Dependency inversion principle )
+*A. High-level modules should not depend on low-level modules. Both should depend on abstractions.<br>
+B. Abstractions should not depend on details. Details should depend on abstractions.*
+
+https://en.wikipedia.org/wiki/Dependency_inversion_principle
+
+### 2. Program to interface, not implementation
+### 3. DRY 
+##### Don't repeat youself
+### 4. Encapsulate what varies
+### 5. Depend on abstractions, not concrete classes
+### 6. Favor composition over inheritance
+### 7. KISS
+##### Keep it simple and sweet/stupid
+---
+*Sources:*
+- http://code.tutsplus.com/tutorials/solid-part-1-the-single-responsibility-principle--net-36074
+- http://www.oodesign.com/open-close-principle.html
+- http://code.tutsplus.com/tutorials/solid-part-3-liskov-substitution-interface-segregation-principles--net-36710
+- https://en.wikipedia.org/wiki/Interface_segregation_principle
+- http://code.tutsplus.com/tutorials/solid-part-3-liskov-substitution-interface-segregation-principles--net-36710
+- http://www.oodesign.com/interface-segregation-principle.html
