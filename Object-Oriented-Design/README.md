@@ -157,7 +157,7 @@ class Car extends Vehicle {
 ##### - I ( The Interface Segregation Principle )
 States that no client should be forced to depend on methods it does not use. ISP splits interfaces which are very large into smaller and more specific ones so that clients will only have to know about the methods that are of interest to them. 
 
-**Example 1**
+*Example 1*
 ```{java}
 // Bad 
 interface Vehicle {
@@ -197,7 +197,7 @@ interface ControllableAudio {
 }
 ```
 
-**Example 2**
+*Example 2*
 ```{java}
 // meeeh
 interface IWorker {
@@ -252,13 +252,17 @@ B. Abstractions should not depend on details. Details should depend on abstracti
 https://en.wikipedia.org/wiki/Dependency_inversion_principle
 
 ### 2. Program to interface, not implementation
-### 3. DRY 
-##### Don't repeat youself
+### 3. DRY ( Don't repeat youself )
 ### 4. Encapsulate what varies
 ### 5. Depend on abstractions, not concrete classes
 ### 6. Favor composition over inheritance
-### 7. KISS
-##### Keep it simple and sweet/stupid
+### 7. KISS ( Keep it simple and sweet/stupid )
+---
+***Good Books***
+
+- <a href="http://www.amazon.com/Head-First-Design-Patterns-Freeman/dp/0596007124">Head First Design Patterns</a> - good start
+- <a href="http://www.amazon.com/Design-Patterns-Elements-Reusable-Object-Oriented/dp/0201633612">Design Patterns: Elements of Reusable Object-Oriented Software</a> - more advanced
+
 ---
 *Sources:*
 - http://code.tutsplus.com/tutorials/solid-part-1-the-single-responsibility-principle--net-36074
